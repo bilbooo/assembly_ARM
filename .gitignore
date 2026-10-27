@@ -1,0 +1,3 @@
+# Ignoro tutti i file C e quelli ASM in x86 (compilati con gcc)
+*.c
+*_x86*
