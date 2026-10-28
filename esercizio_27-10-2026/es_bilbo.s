@@ -26,15 +26,16 @@ _loop:
     b _continue         @ se è > 122 significa che non è una lettera e skippo
 
 _continue:
-    add r0, r0, #1      @ vado al char successivo
-    b _loop
+    add r0, r0, #1      @ vado al char successivo (incremento il puntatore di 1 byte)
+    b _loop             @ ripeto il ciclo
 
 _toupper:
     sub r1, r1, #32     @ sottraggo 32 cosi passo dalla lettera minusc a MAIUSC
-    strb r1, [r0]
-	b _continue
+    strb r1, [r0]       @ scrivo il carattere modificato
+	b _continue         @ vado avanti con l'iterazione
 
 _end:
+    b _end
 
 
     .data
