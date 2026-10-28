@@ -1,3 +1,15 @@
+/* Questo è un codice che scandisce una stringa in memoria e ne trasforma le lettere minuscule in maiuscole.
+ * La minuscule partono da 'a' con codice 97, le maiuscole dalla 'A' con codice 65. Dunque per trasformare una
+ * minuscolo in maiuscola basta sottrarre 32 al suo codice ascii. 
+ * Provate ad eseguire il programma utilizzando CPUVERILATOR.
+ * Modificate il codice per evitare che anche i caratteri di punteggiatura che hanno codice successive alle
+ * minuscule (per esempio i caratteri '{' '}' e '|' vengano "trasformati" (suggerimento: occorre controllare sia che
+ * il codice sia >= del codice della 'a' che minore o uguale del codice della 'z', prima di fare la trasformazione.
+ * Il nome della condizione minore o uguale è "LE" in armv7).
+ * Modificate il codice in modo che, se non occorra effettuare alcuna modifica, non venga eseguita la STRB del valore
+ * precedentemente letto (suggerimento: rimuovere l'auto incremento del valore utilizzato per accedere al carattere nella
+ * stringa dalla STRB, saltare la STRB se non serve e proseguire aggiornando il puntatore) */
+
 	.text				    @ questo è il segmento che contiene le istruzioni
 	
 main:					    @ definiamo un main ... 
