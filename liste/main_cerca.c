@@ -1,22 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
  
-struct ELEM {
+typedef struct _elem {
     int x;
     struct _elem *next;
-};
+} ELEM;
  
-extern int cerca(struct ELEM*, int);
+extern int cerca(ELEM*, int);
  
 int main(int argc, char **argv) {
  
 	int x = (argc != 1 ? atoi(argv[1]) : 1); 
 	int trovato = 0;
  
-	struct ELEM *p; 
-	struct ELEM *p1 = (struct ELEM *)calloc(1, sizeof(struct ELEM));
-	struct ELEM *p2 = (struct ELEM *)calloc(1, sizeof(struct ELEM));
-	struct ELEM *p3 = (struct ELEM *)calloc(1, sizeof(struct ELEM));
+	ELEM *p; 
+	ELEM *p1 = (ELEM *)calloc(1, sizeof(ELEM));
+	ELEM *p2 = (ELEM *)calloc(1, sizeof(ELEM));
+	ELEM *p3 = (ELEM *)calloc(1, sizeof(ELEM));
 	p1->x = 1; 
 	p2->x = 2; 
 	p3->x = 3; 
