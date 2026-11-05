@@ -1,3 +1,5 @@
+@ funzione di ricerca di un elemento all'interno di un alista concatenata, usata dal file main_cerca.c
+
     .text
 	.global cerca
 	.type cerca, %function

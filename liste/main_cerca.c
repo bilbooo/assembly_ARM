@@ -1,16 +1,21 @@
+/* Cerca un elemento passata in input dentro una lista concatenata, versione leggermente diversa da quella del prof
+ * dove lui prendeva gli argomenti da riga di comando, e se non erano presenti assumeva che il numero cercato fosse 1 */
+
 #include <stdio.h>
 #include <stdlib.h>
  
-typedef struct _elem {
+typedef struct elem {
     int x;
-    struct _elem *next;
+    struct elem *next;
 } ELEM;
  
 extern int cerca(ELEM*, int);
  
 int main(int argc, char **argv) {
- 
-	int x = (argc != 1 ? atoi(argv[1]) : 1); 
+
+	int x;
+	printf("Inserisci il numero da cercare: ");
+	scanf("%d", &x); 
 	int trovato = 0;
  
 	ELEM *p; 
@@ -26,6 +31,6 @@ int main(int argc, char **argv) {
 	p = p1;
  
   	trovato = cerca(p, x); 	
-	printf("%d %s trovato\n", x, (trovato ? " " : " NON "));
+	printf("%d %s trovato\n", x, (trovato ? "" : "NON"));
 	return(0); 
 }
