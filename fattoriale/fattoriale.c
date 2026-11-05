@@ -7,15 +7,11 @@ size_t fattoriale(int n) {
     return (n * fattoriale(n - 1));
 }
 
-int main(int argc, char **argv) {
+int main(void) {
     size_t risultato = 0;
-    int num = atoi(argv[1]);
-    if (num < 0) {
-        printf("Numeri negativi non sono accettati\n");
-        return 1;
-    }
+    int num = 5;
 
-    risultato = fattoriale(num);
+    risultato = fattoriale(5);
     printf("%d! = %zu\n", num, risultato);
 
     return 0;
