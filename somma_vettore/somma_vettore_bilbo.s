@@ -25,8 +25,8 @@ somma:
     mov r3, #0                  @ inizializzo sum = 0
 
 loop:
-    cmp r2, r1                  @ i < n? equivale alla seconda istruzione del for dopo i = 0
-    beq fine                    @ se si, ho scorso tutto l'array e ho finito, salto a fine
+    cmp r2, r1                  @ confronto i con n (serve per i < n). equivale alla seconda istruzione del for dopo i = 0
+    beq fine                    @ quando i == n salto a fine
     ldr r4, [r0, r2, lsl #2]    @ sarebbe come scrivere r4 = MEM[r0 + (r2 * 4)]         r4 = v[i] in C
     add r3, r3, r4              @ sum = sum + v[i]
     add r2, r2, #1              @ i++
