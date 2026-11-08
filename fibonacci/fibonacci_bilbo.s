@@ -14,7 +14,7 @@
 main:
     push {lr}                   @ salvo l'indirizzo di ritorno
     push {r4, r5, r6}           @ salvo sullo stack i callee-saved
-    mov r4, #4                  @ n = indice del numero di Fibonacci da calcolare
+    mov r4, #6                  @ num = indice del numero di Fibonacci da calcolare
     mov r0, r4                  @ si usa r0 come registro per passare i parametri e quindi metto li il valore
     bl fibonacci                @ chiamata alla funzione fibonacci
     mov r5, r0                  @ salvo in r5 il risultato della chiamata alla funzione
