@@ -1,0 +1,2 @@
+/* Scrivere una funzione char *creacopia(char *s) che restituisce una copia di una stringa ricevuta come parametro.
+ * La funzione deve allocare lo spazio necessario a creare la copia utilizzando una malloc. */
