@@ -1,0 +1,2 @@
+/* Il programma C legge una parola (ad esempio da riga di comando) e la passa all'Assembly insieme alla sua lunghezza.
+ * L'Assembly deve scorrere la parola e verificare se è palindroma, restituendo al C 1 (true) o 0 (false). */

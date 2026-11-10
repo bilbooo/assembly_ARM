@@ -1,0 +1,2 @@
+/* Il programma C legge una stringa da riga di comando e la passa all'Assembly. La funzione Assembly deve contare
+ * quante vocali minuscole ci sono nella stringa e restituire il conteggio finale al chiamante per la stampa */
