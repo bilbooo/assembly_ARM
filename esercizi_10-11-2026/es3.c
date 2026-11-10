@@ -1,1 +1,0 @@
-/* Scrivere il codice assembler per un main che stampa "ciao" utilizzando una printf. */
