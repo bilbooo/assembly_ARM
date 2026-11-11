@@ -1,0 +1,6 @@
+# file C di supporto a quelli Assembly
+*.c
+
+# Binary
+main
+a.out
