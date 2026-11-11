@@ -38,7 +38,7 @@ main:
     mov r1, r0                      @ puntatore alla copia
     ldr r0, =s2                     @ formato printf
     bl printf                       @ chiamo printf
-    mov r0, #0                      @ return o
+    mov r0, #0                      @ return 0
     pop {r4, pc}                    @ ripristino r4 e il vecchio lr diventa pc
 
 
