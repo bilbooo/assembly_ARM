@@ -70,7 +70,7 @@ trovato:
 fine:
     mov r0, r7
     pop {r4-r7}
-    pop {pc}
+    mov pc, lr
 
 
 
