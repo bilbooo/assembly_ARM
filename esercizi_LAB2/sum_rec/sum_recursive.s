@@ -15,13 +15,13 @@
     .type somma, %function
 
 somma:
-    push {lr}
-    cmp r1, #0
-    beq fine
-    sub r1, r1, #1
-    add r0, r0, #1
-    bl somma
+    push {lr}                       @ salvo indirizzo di ritorno
+    cmp r1, #0                      @ caso base: b == 0 ?
+    beq fine                        @ se si termino
+    sub r1, r1, #1                  @ b - 1 (dentro la chiamta ricorsiva)
+    add r0, r0, #1                  @ a + 1 (dentro la chiamata ricorsiva)
+    bl somma                        @ ricorsione
 
 
 fine:
-    pop {pc}
+    pop {pc}                        @ return
