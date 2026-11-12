@@ -1,7 +1,13 @@
-/* Scrivere una propria funzione equivalente a strncmp, che confronti al più i primi n
- * caratteri delle due stringhe passate come argomento.
- * int strncmp (char* s1 , char* s2 , int n);
- * 
- * Risultato
- * Restituisce 0 se le due stringhe coincidono nei caratteri confrontati, un valore diverso
- * da 0 altrimenti. */
+#include <stdio.h>
+
+extern int my_strncmp(char *, char *, int);
+
+int main(void) {
+    char str1[] = "Matthew è un figo";
+    char str2[] = "Matthew è uno gay";
+    int risultato1 = my_strncmp(str1, str2, 12);
+    int risultato2 = my_strncmp(str1, str2, 15);
+    printf("Risultato 1 = %d, Risultato 2 = %d\n", risultato1, risultato2);
+
+    return 0;
+}
