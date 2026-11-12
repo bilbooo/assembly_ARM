@@ -1,6 +1,18 @@
-/* Scrivere una funzione con il prototipo: int somma (int a, int b);
- * La funzione prende in ingresso due numeri interi a e b, con b ≥ 0, ed è definita come:
- *              somma(a, 0) = a,
- *              somma(a, b) = somma(a + 1, b − 1).
- * 
- * Nota: a e b sono numeri piccoli. */
+#include <stdio.h>
+
+extern int somma(int, int);
+
+/*
+int somma(int a, int b) {
+    if (b == 0) return a;
+
+    return somma(a + 1, b - 1);
+}
+*/
+
+int main(void) {
+    int a = -5, b = 7  ;
+    printf("%d + %d = %d\n", a, b, somma(a, b));
+
+    return 0;
+}
