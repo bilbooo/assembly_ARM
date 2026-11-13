@@ -23,7 +23,7 @@ loop:
     cmp r5, r1                                      @ contatore < n ?
     bge fine                                        @ se >= termino
     ldr r2, [r0, r5, lsl #2]                        @ leggo da r0[r5] il valore e lo scrivo in r2 (shift logico a sx perche una word sono 4 byte)
-    and r3, r2, #1                                  @ metto in r2 il risultato dall'and tra il numero in v[i] e 1 (controllo parità)
+    and r3, r2, #1                                  @ metto in r3 il risultato dall'and tra il numero in v[i] e 1 (controllo parità)
     cmp r3, #1                                      @ il risultato dall'and è 1 ?
     beq somma                                       @ se si, numero dispari e sommo
     add r5, r5, #1                                  @ contatore++
